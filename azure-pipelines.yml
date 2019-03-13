@@ -1,16 +1,23 @@
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema#pool
 pool:
+  # https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted#use-a-microsoft-hosted-agent
   vmImage: windows-2019
 steps:
 - checkout: self
   clean: true
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/powershell
 - task: PowerShell@2
   inputs:
     targetType: inline
     script: $PSVersionTable.PSVersion
     pwsh: false
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/powershell
 - task: PowerShell@2
   inputs:
     targetType: inline
     script: $PSVersionTable.PSVersion
     pwsh: true
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema#powershell
+- powershell: $PSVersionTable.PSVersion
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema#pwsh
 - pwsh: $PSVersionTable.PSVersion
