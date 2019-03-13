@@ -1,15 +1,11 @@
 steps:
 - checkout: self
   clean: true
-- powershell:
-  inputs: $PSVersionTable.PSVersion
+- powershell: $PSVersionTable.PSVersion
   pwsh: false
-- powershell:
-  inputs: $PSVersionTable.PSVersion
+- powershell: $PSVersionTable.PSVersion
   pwsh: true
-- pwsh:
-  inputs: $PSVersionTable.PSVersion
+- pwsh: $PSVersionTable.PSVersion
   pwsh: false
-- pwsh:
-  inputs: $PSVersionTable.PSVersion
+- pwsh: $PSVersionTable.PSVersion
   pwsh: true
