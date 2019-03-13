@@ -6,6 +6,3 @@ steps:
 - powershell: $PSVersionTable.PSVersion
   pwsh: true
 - pwsh: $PSVersionTable.PSVersion
-  pwsh: false
-- pwsh: $PSVersionTable.PSVersion
-  pwsh: true
